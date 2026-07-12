@@ -21,3 +21,12 @@ public static int minimumNumber(int n, string password)
         
         return Math.Max(missingTypes, lengthRequirement);
     }
+
+//Big-Sorting Problem 
+public static List<string> bigSorting(List<string> unsorted)
+    {
+        return unsorted
+        .OrderBy(u => u.Length)   // sort by length first
+        .ThenBy(u => u)           // then lexicographically
+        .ToList();
+    }
