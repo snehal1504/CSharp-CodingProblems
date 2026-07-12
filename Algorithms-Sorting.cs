@@ -25,3 +25,20 @@ public static void insertionSort1(int n, List<int> arr)
     }
 
 }
+
+
+//Counting-Sort1
+public static List<int> countingSort(List<int> arr)
+    {
+        // Frequency array of size 100
+        int[] freq = new int[100];
+
+        // Count occurrences
+        foreach (int num in arr)
+        {
+            freq[num]++;
+        }
+
+        // Convert to List<int> for return
+        return new List<int>(freq);
+    }
